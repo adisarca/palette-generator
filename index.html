@@ -1,15 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./node_modules/@fortawesome/fontawesome-free/css/all.css">
     <title>Document</title>
 </head>
+
 <body>
-    <nav id="navbar"></nav>
-    
+    <nav id="navbar">
+        <div class="intro">
+            Press any key to generate...
+        </div>
+        <div class="tools">
+            <div class="tool">
+                <i class="fas fa-plus"></i>
+                <div id="addColor" style="margin-left:5px; cursor: pointer;">Add Color</div>
+            </div>
+
+            <div class="tool">
+                <i class="fas fa-camera"></i>
+                <div style="margin-left:5px; cursor: pointer;">Pallete From Photo (Coming Soon)</div>
+            </div> 
+
+            <div class="tool" id="viewGradient">
+                <i class="fas fa-low-vision"></i>
+                <div style="margin-left:5px; cursor: pointer;">View Gradient (Coming Soon)</div>
+            </div>
+
+            <div class="tool" id="viewGradient">
+                <i class="fas fa-file-pdf"></i>
+                <div style="margin-left:5px; cursor: pointer;">Pdf (Coming Soon)</div>
+            </div>
+
+
+        </div>
+    </nav>
+    <div id="gradient">
+
+    </div>
+    <div id="colors">
+        <div class="color" id="color1" >
+            <div class="icons">
+                <i class="fas fa-times" onclick="removeElement(c1)"><span class="tooltiptext">Remove Color</span></i>
+                <i class="fas fa-border-all" onclick="generateShades(cc1.innerHTML, c1, cc1, c1name)"><span class="tooltiptext">View Shades</span></i>
+                <i class="fas fa-arrows-alt-h" onclick="changeOrder(c1)"><span class="tooltiptext">Drag (Coming Soon)</span></i></i>
+                <i class="far fa-copy" onclick="copyToClipboard(cc1.innerHTML)"><span class="tooltiptext">Copy</span></i>
+                <i class="fas fa-unlock" id="lock1"><span class="tooltiptext">Lock</span></i></i>
+            </div>
+
+            <div class="codeName">        
+                <div id="color1code">#a7d0e7</div>
+                <p id="color1name">Regent St Blue</p>
+            </div>
+            <div class="shades" style="display: none;">
+            </div>
+        </div>
+        <div class="color" id="color2">
+            <div class="icons">
+                <i class="fas fa-times" onclick="removeElement(c2)"><span class="tooltiptext">Remove Color</span></i>
+                <i class="fas fa-border-all" onclick="generateShades(cc2.innerHTML, c2, cc2, c2name)"><span class="tooltiptext">View Shades</span></i>
+                <i class="fas fa-arrows-alt-h"><span class="tooltiptext">Drag (Coming Soon)</span></i></i>
+                <i class="far fa-copy" onclick="copyToClipboard(cc2.innerHTML)"><span class="tooltiptext">Copy</span></i>
+
+                <i class="fas fa-unlock" id="lock2"><span class="tooltiptext">Lock</span></i></i>
+
+            </div>
+            <div class="codeName">
+                <div id="color2code">#8b7ada</div>
+                <p id="color2name">True V</p>
+            </div>
+            <div class="shades" style="display: none;">
+            </div>
+        </div>
+        <div class="color" id="color3">
+            <div class="icons">
+                <i class="fas fa-times" onclick="removeElement(c3)"><span class="tooltiptext">Remove Color</span></i>
+                <i class="fas fa-border-all" onclick="generateShades(cc3.innerHTML, c3, cc3, c3name)"><span class="tooltiptext">View Shades</span></i>
+                <i class="fas fa-arrows-alt-h"><span class="tooltiptext">Drag (Coming Soon)</span></i></i>
+                <i class="far fa-copy" onclick="copyToClipboard(cc3.innerHTML)"><span class="tooltiptext">Copy</span></i>
+                <i class="fas fa-unlock" id="lock3"><span class="tooltiptext">Lock</span></i></i>
+
+            </div>
+            <div class="codeName">
+                <div id="color3code">#9ff58a</div>
+                <p id="color3name">Sulu</p>
+            </div>
+            <div class="shades" style="display: none;">
+            </div>
+        </div>
+        <div class="color" id="color4">
+            <div class="icons">
+                <i class="fas fa-times" onclick="removeElement(c4)"><span class="tooltiptext">Remove Color</span></i>
+                <i class="fas fa-border-all" onclick="generateShades(cc4.innerHTML, c4, cc4, c4name)"><span class="tooltiptext">View Shades</span></i>
+                <i class="fas fa-arrows-alt-h"><span class="tooltiptext">Drag (Coming Soon)</span></i></i>
+                <i class="far fa-copy" onclick="copyToClipboard(cc4.innerHTML)"><span class="tooltiptext">Copy</span></i>
+                <i class="fas fa-unlock" id="lock4"><span class="tooltiptext">Lock</span></i></i>
+
+            </div>
+            <div class="codeName">
+                <div id="color4code">#e778b7</div>
+                <p id="color4name">Carissma</p>
+            </div>
+            <div class="shades" style="display: none;">
+            </div>
+        </div>
+        <div class="color" id="color5">
+            <div class="icons">
+                <i class="fas fa-times" onclick="removeElement(c5)"><span class="tooltiptext">Remove Color</span></i>
+                <i class="fas fa-border-all" onclick="generateShades(cc5.innerHTML, c5, cc5, c5name)"><span class="tooltiptext">View Shades</span></i>
+                <i class="fas fa-arrows-alt-h"><span class="tooltiptext">Drag (Coming Soon)</span></i>
+                <i class="far fa-copy" onclick="copyToClipboard(cc5.innerHTML)"><span class="tooltiptext">Copy</span></i>
+                <i class="fas fa-unlock" id="lock5"><span class="tooltiptext">Lock</span></i></i>
+
+            </div>
+            <div class="codeName">
+                <div id="color5code">#fd7dec</div>
+                <p id="color5name">Blush Pink</p>
+            </div>
+            <div class="shades" style="display: none;">
+            </div>
+        </div>
+    </div>
+    <script type='text/javascript' src='./bower_components/tinycolor/tinycolor.js'></script>
     <script src="main.js"></script>
+    
 </body>
+
 </html>

@@ -1,8 +1,354 @@
 *{
     margin: 0;
 }
-#navbar{
-    height: 50px;
-    width: 100%;
-    background-color: grey;
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
 }
+#navbar{
+    height: 70px;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    border-bottom: 1px solid rgb(175, 175, 175);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.tools{
+    margin-right: 10px;
+    display: flex;
+    width: 50%;
+    justify-content: space-around;
+}
+.tool{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+}
+
+.intro{
+margin-left: 10px;
+color: rgb(83, 83, 83);
+}
+
+
+#colors{
+    display: flex;
+    width: 100%;
+    height: calc(100vh -  71px);
+}
+.color{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    
+}
+
+i{
+    cursor: pointer;
+}
+
+
+
+.icons{
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    height: 80%;
+    font-size: 20px;
+    visibility: hidden;
+}
+
+#color1{
+    order: 1;
+    background-color: #a7d0e7;
+}
+
+#color1:hover .icons{
+    visibility: visible;
+}
+
+#color2:hover .icons{
+    visibility: visible;
+}
+
+#color3:hover .icons{
+    visibility: visible;
+}
+
+#color4:hover .icons{
+    visibility: visible;
+}
+
+#color5:hover .icons{
+    visibility: visible;
+}
+
+#color2{
+    order: 2;
+    background-color: #8b7ada;
+}
+#color3{
+    order: 3;
+    background-color: #9ff58a;
+}
+#color4{
+    order: 4;
+    background-color: #e778b7;
+}
+#color5{
+    order: 5;
+    background-color: #fd7dec;
+}
+
+#color1name, #color2name, #color3name, #color4name, #color5name{
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+#color1code, #color2code, #color3code, #color4code, #color5code{
+    font-size: 30px;
+    text-transform: uppercase;
+   
+}
+
+.codeName{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 20%;
+}
+
+
+.fa-times, .fa-border-all, .fa-copy, .fa-unlock, .fa-arrows-alt-h{
+  position: relative;
+}
+
+.fa-times .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: rgb(0, 0, 0);
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 0.3s;
+  font-size: 14px;
+  font-family: Helvetica, sans-serif;
+}
+
+.fa-times .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: rgb(0, 0, 0) transparent transparent transparent;
+}
+
+.fa-times:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+
+
+.fa-border-all .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: rgb(0, 0, 0);
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-size: 14px;
+    font-family: Helvetica, sans-serif;
+  }
+  
+  .fa-border-all .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: rgb(0, 0, 0) transparent transparent transparent;
+  }
+  
+  .fa-border-all:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+  }
+
+
+
+
+
+  .fa-copy .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: rgb(0, 0, 0);
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-size: 14px;
+    font-family: Helvetica, sans-serif;
+  }
+  
+  .fa-copy .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: rgb(0, 0, 0) transparent transparent transparent;
+  }
+  
+  .fa-copy:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+
+
+
+  .fa-unlock .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: rgb(0, 0, 0);
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-size: 14px;
+    font-family: Helvetica, sans-serif;
+  }
+  
+  .fa-unlock .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: rgb(0, 0, 0) transparent transparent transparent;
+  }
+  
+  .fa-unlock:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+  }
+
+
+ 
+
+
+
+  .fa-arrows-alt-h .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: rgb(0, 0, 0);
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-size: 14px;
+    font-family: Helvetica, sans-serif;
+  }
+  
+  .fa-arrows-alt-h .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: rgb(0, 0, 0) transparent transparent transparent;
+  }
+  
+  .fa-arrows-alt-h:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .shades{
+    display: flex;
+    align-items: center;
+    
+    flex-direction: column;
+    height: 100%;
+    font-size: 20px;
+    width: 100%;
+  }
+
+
+  .shade{
+      font-size: 14px;
+      width: 100%;
+      height: 100%;
+      cursor: pointer;
+      
+  }
+
+
+
+
+#gradient{
+    height: calc(100vh - 71px);
+    width: 100%;
+}
+
+
+
+  
+
+
